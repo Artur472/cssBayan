@@ -1,0 +1,65 @@
+body {
+  background-color: #cc1c1c;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.flex {
+  display: flex;
+}
+
+.wrapper {
+  max-width: 40em;
+  margin: 10vh auto;
+  color: black;
+  background-color: white;
+  padding: 5vh 5vh;
+}
+h1 {
+  text-align: start;
+}
+
+.accordion-item {
+    cursor: pointer;
+}
+
+.accordion-item input,
+.accordion-content {
+  display: none;
+}
+
+.accordion-title {
+  padding: 2vh;
+  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: margin-right 2s, color 1s;
+}
+
+
+.accordion-img {
+  height: 25em;
+    width: 100%;
+    object-fit: contain;
+}
+
+.accordion-title::after {
+  content: "+";
+}
+
+.accordion-item :checked + .accordion-title {
+
+}
+
+.accordion-item :checked + .accordion-title::after {
+  content: "x";
+}
+
+.accordion-item :checked ~ .accordion-content {
+    content: "";
+  display: block;
+  transition: 2s;
+}
+
